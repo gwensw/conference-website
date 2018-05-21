@@ -1,0 +1,98 @@
+<head>
+    <title>Numbers and Numeracy Conference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+    <!---STYLE--->
+    <link rel="stylesheet" type="text/css" href="conference.css">
+    
+    <!---GOOGLE ANALYTICS--->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-77201845-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <!---JAVASCRIPT: toggles visibility--->
+    <script type="text/javascript">
+        function toggle_visibility(id, sid) {
+            var e = document.getElementById(id);
+            var s = document.getElementById(sid);
+            if(e.style.display == 'block') {
+                e.style.display = 'none';
+                s.innerHTML = ">";
+            }
+            else {
+                e.style.display = 'block';
+                s.innerHTML = "v";
+            }
+        }
+    </script>
+    
+    <meta name="google-site-verification" content="80SLE-BmeMxeRnubUNajH5hPMdKBJpD4v1Gze8FOMpI" />
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="navbox" onclick="toggle_visibility('navigation',null)">
+            <div class="navboxLine"></div>
+            <div class="navboxLine" id="navboxShortLine"></div>
+            <div class="navboxLine" id="navboxLastLine"></div>
+        </div>
+        
+        <nav id="navigation">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="register.html"><li>Registration</li></a>
+                <a href="programme.html"><li>Programme</li></a>
+                <a href="abstracts.html"><li>Abstracts</li></a>
+                <a href="travel.html"><li>Travel & Accommodation</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Numbers and Numeracy in Classical Greece</h1>
+            <div class = "lineDiv"></div>
+            <h2>Leiden University<br> 2-3 September 2016</h2>
+            <div class = "lineDiv"></div>
+            <a href="register.html"><button type="button" class="register" onclick="ga('send', 'event', 'Buttons', 'click', 'Register Button');">REGISTER<br><span style="font-size: 12px">Closes noon 01/09</span></button></a>
+        </header>
+
+        <section>
+            <article>
+                <p class="presenters"><span class="bold">Keynote Speaker: Serafina Cuomo (Birkbeck)</span></p>
+                <p class="presenters"><span class="bold">Presenters include:</span><br> Josine Blok (Utrecht), Kai Brodersen (Erfurt), Stephen Johnstone (Arizona), Lisa Kallet (Oxford), Athena Kirk (Cornell), Robin Osborne (Cambridge), Catherine Rubincam (Toronto), Richard Seaford (Exeter) and Valeria Sergueenkova (Cincinnati)</p>
+                <p class="presenters"><span class="bold">Conference Organisers:</span><br>Tazuko van Berkel (Leiden) and Robert Sing (Cambridge)</p>
+                <h3 class="topmargin_big">Do numbers ever speak for themselves?</h3>
+                <p>Numbers, quantification, and calculation are ubiquitous in the historical record of Classical Greece and exhibit a range of ideological and communicative meanings.
+                <p>This conference will bring together the growing number of scholars working on numbers in contexts of mass communication - both real (inscriptions, oratory, drama) and imagined (e.g. speeches in historiographical contexts), and those working on ancient numeracy. Our aim will be to explore the ideological meanings and communicative functions of numbers in classical Greece, and democratic Athens in particular.</p>
+                <h3>Join us as we explore these key themes:</h3>
+                <ul>
+                    <li><p>What communicative situation and communicative relationship does the use of numbers presuppose?</p></li>
+                    <li><p>What is the relationship between the presentation of numbers (whether as quantification or calculation) and their communicative function? Is the communication purely 'utilitarian' or are other values such as accountability, transparency, expertise, or objectivity being communicated?</p></li>
+                    <li><p>What is the relationship between the mass communication of numbers and numerical calculation in daily life (e.g. economic exchange, political organisation)?</p></li>
+                </ul>
+                <h3>With support from:</h3>
+                <img class="logo" src="nwo_logo.png" alt="Netherlands Organisation for Scientific Research">
+                <img class="logo" src="leiden_logo.png" alt="Leiden University">
+                <img class="logo" id="wide_logo" src="cambridge_logo.jpg" alt="University of Cambridge">
+                <img class="logo" id="wide_logo" src="knaw_logo.jpg" alt="KNAW">
+            </article>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>Conference organised by <a href="http://leidenuniv.academia.edu/TAvanBerkel" alt="Tazuko van Berkel's Academic.edu profile">Tazuko van Berkel</a> (Leiden) and <a href="http://cambridge.academia.edu/RobSing" alt="Robert Sing's Academia.edu profile">Robert Sing</a> (Cambridge).</p>
+        <p>Website by <a href="https://www.linkedin.com/in/gwen-sims-williams-55b97769" alt="LinkedIn">Gwen Sims-Williams</a>.</p>
+        <p>Photos: Athenian tribute list by <a href="https://commons.wikimedia.org/wiki/File%3AEPMA-IGI(3)273-280-Tribute_list_2-2.JPG" title="Wikimedia Commons">Marsyas</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" title="Creative Commons">CC BY-SA 3.0</a>.<br>
+        Douris vase painting by <a href="https://commons.wikimedia.org/wiki/File:Douris_Man_with_wax_tablet.jpg" title="Wikimedia Commons">Pottery Fan</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" title="Creative Commons">CC BY-SA 3.0</a>.</p>
+    </footer>
+        
+</body>

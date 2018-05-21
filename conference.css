@@ -1,0 +1,727 @@
+/*//////////// COLOUR SCHEME //////////////
+
+RED (highlights, links): #FF5A49 || 255 90 73
+
+OFF-WHITE (main background, footer text, image highlights): #F9FFF3 || 249 255 243
+
+CREAM (illustration base): #FFF2DE || 255 242 222
+
+GOLD (illustration shading): #EBD4B3 || 235 212 179
+
+BROWN (header text, footer background): #302724 || 48 39 36
+
+BLACK-BROWN (main text): #0F0C0B || 15 12 11
+
+///////////// IMAGE DIMENSIONS //////////////
+
+Header image: 1803px x 3066px
+
+//////////////////////////////////////////*/
+
+/*CSS RESET*/
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, footer, header, menu, nav, section, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+    color: inherit;
+    text-decoration: none;
+    background: transparent; 
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, footer, header, nav, section {
+	display: block;
+}
+
+/*///////////////////////////////////////////////////////////////////////*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+#container {
+    min-height: 100%;
+}
+
+span.bold {
+    font-weight: 800;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+span.bolditalic {
+    font-style: italic;
+    font-weight: 800;
+}
+
+span.normaltext {
+    font-style: normal;
+}
+
+/*//////////NAVIGATION*/
+
+#navbox {
+    width: 28px;
+    height: 28px;
+    display: block;
+    float: left;
+    margin: 10px 0 0 10px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.navboxLine {
+    background-color: #FF5A49;
+    height: 8px;
+    margin-bottom: 2px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#navboxShortLine {
+    width: 85%;
+}
+
+#navboxLastLine {
+    margin-bottom: 0;
+}
+
+nav {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: rgba(48, 39, 36, 1);
+    z-index: 1;
+    text-align: left;
+}
+
+nav ul {
+    margin-left: 60px;
+    /*compensates for the -5px margin which removes gaps between the inline-block li's*/
+}
+
+nav li {
+    color: #F9FFF3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    text-decoration: none;
+    display: block;
+    vertical-align: middle;
+    padding: 15px 20px;
+    margin-left: -5px;
+}
+
+nav li:hover {
+    background-color: rgba(255, 90, 73, 0.9);
+    cursor: pointer;
+}
+
+#activePage {
+    background-color: rgba(255, 90, 73, 0.9);
+}
+
+/*//////////HEADER*/
+
+header {
+    width: 100%;
+    height: 390px;
+    position: relative;
+    background-color: #FFF2DE;
+    background-color: rgba(255, 242, 222, 0.75);
+    color: #302724;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 60px;
+}
+
+header::after {
+    content: "";
+    background: url("tribute_list.JPG");
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    z-index: -1;
+}
+
+h1 {
+    clear: both;
+    font-size: 1.9em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 auto 30px;
+    width: 98%;
+    max-width: 300px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 70%;
+    text-align: center;
+}
+
+.lineDiv {
+    width: 30%;
+    max-width: 150px;
+    height: 0px;
+    margin: 0 auto 1px;
+    border-top: 1px solid;
+    border-color: #302724;
+    
+}
+
+button.register,
+#mc-embedded-subscribe {
+    display: block;
+    margin: 70px auto 0;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #302724;
+    color: #FF5A49;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 3px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+button.register:hover,
+#mc-embedded-subscribe:hover {
+    background-color: #4f4d4b;
+    -webkit-box-shadow: inset 1px 1px 124px -30px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 1px 1px 124px -30px rgba(0,0,0,0.75);
+            box-shadow: inset 1px 1px 124px -30px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+/*//////////MAIN TEXT*/
+
+section {
+    color: #0F0C0B;
+}
+
+article {
+    padding: 10px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1em;
+    margin: 16px 0 0;
+    line-height: 22px;
+    text-align: center;
+}
+
+.p-understated {
+    margin: 10px 0 0;
+    font-style: italic;
+    font-weight: 700;
+}
+
+h3, h4 {
+    font-size: 1.2em;
+    margin: 35px auto 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+h4:nth-of-type(odd) {
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+h5 {
+    float: right;
+    display: inline;
+}
+
+article li {
+    margin-left: 1em;
+}
+
+article li p {
+    text-align: left;
+}
+
+article a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF5A49;
+}
+
+.presenters {
+    font-size: 1.1em;
+    text-align: center;
+    width: 90%;
+    max-width: 785px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.logo {
+    width: 200px;
+    margin: 25px auto 0;
+    display: block;
+}
+
+#wide_logo {
+    height: 80px;
+    width: auto;
+}
+
+.topmargin_big {
+    margin-top: 60px;
+}
+
+article.left_headers h3 {
+    text-align: left;
+}
+
+article.left_headers h4 {
+    text-align: left;
+}
+
+/*//////////TABLES*/
+
+table {
+    margin: 20px 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+tr:nth-of-type(even) {
+    background-color: #F9FFF3;
+}
+
+td {
+    padding: 2% 50px 2% 2%;
+    margin: 0;
+}
+
+td:last-of-type {
+    padding-right: 0px;
+}
+
+td.session {
+    padding: 5px;
+    background-color: #FF5A49;
+    color: #0F0C0B;
+    font-family: 'Montserrat', sans-serif;
+}
+
+tr.session {
+    background-color: #FF5A49;
+    font-family: 'Montserrat', sans-serif;
+}
+
+td a {
+    color: #0F0C0B;
+    display: inline-block;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+#programmeArticle {
+    width: 90%;
+}
+
+@media screen and (max-width: 740px) {
+    td, td.session {
+        padding-right: 15px;
+    }
+    
+    #programmeArticle {
+        width: 100%;
+        /*Lets tables be fullscreen width on mobile*/
+    }
+}
+
+/*//////////FOOTER*/
+
+footer {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    background-color: #302724;
+    color: #F9FFF3;
+    font-size: 0.8em;
+    position: ;
+}
+
+footer p {
+    margin: 10px 0 0 20px;
+    text-align: left;
+    width: 85%;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF5A49;
+}
+
+/*///////// MEDIA QUERIES ///////////////////////////////////////////////////////////////*/
+
+
+/* Text size increased, header zoomed in, header spaced differently above 471px  */
+
+@media screen and (min-width: 471px) {
+    
+    header::after {
+        background-position: 0% 70%;
+        background-size: cover;
+    }
+    
+    h1 {
+        font-size: 2.4em;
+        max-width: 400px;
+    }
+    
+    footer {
+        margin-top: 90px;
+        padding-top:10px;
+    }
+    
+    button.register {
+        margin-top: 40px;
+    }
+    
+    article p {
+        text-align: justify;
+    }
+    
+    .open h3, .open h4 {
+        margin-left: 0;
+    }
+    
+    img.logo {
+        display: inline-block;
+        margin: 25px 20px 0 0;
+    }
+}
+
+/* Full navigation inline rather than block at widths of 740px and above, meaning one line of links*/
+
+@media screen and (min-width: 740px) {
+    nav li {
+        display: inline-block;
+    }
+    
+    .presenters {
+        width: 80%;
+        line-height: 28px;
+    }
+    
+}
+
+/* Text and navbox size increased, header spaced differently above 800px, checkbox to toggle menu is hidden and disabled  */
+
+@media screen and (min-width: 800px) {
+    
+    h1 {
+        font-size: 2.8em;
+        max-width: 500px;
+    }
+    
+    h3, h4 {
+        text-align: left;
+    }
+    
+    button.register {
+        margin-top: 40px;
+    }
+    
+    #navbox {
+        display: none;
+        /*width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        margin-top: 10px;*/
+    }
+    .navboxLine {
+        background-color: #FF5A49;
+        height: 12px;
+    }
+    
+    #openMenu {
+        display: none;
+    }
+    
+    nav {
+        display: block;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-left: 0px;
+    }
+    
+    nav li {
+        padding: 20px 20px;
+    }
+
+}
+
+
+/*///////////CHANGES FOR SECONDARY PAGES/////////////////*/
+
+.secondaryPageHeader {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.secondaryPageHeader h1 {
+    margin-bottom: 0;
+    font-size: 1.9em;
+}
+
+@media screen and (min-width: 471px) {
+    .secondaryPageHeader h1 {
+        font-size: 2em;
+    }
+}
+
+/*SHOW + HIDE LARGE SECTIONS OF TEXT*/
+
+button.open {
+    cursor: pointer;
+    border: 0;
+    text-align: left;
+}
+
+button.open:focus {
+    outline:0;
+}
+
+button.open h3, button.open h4 {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#programmeArticle h4 {
+    font-size: 1em;
+    margin-left: 5px;
+    font-style: normal;
+}
+
+.expandArrow {
+    display: inline-block;
+    background-color: #FF5A49;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 0.2em;
+    vertical-align: middle;
+    margin-bottom: 0.3em;
+    line-height: 1.3em;
+}
+
+/*ABSTRACTS*/
+
+
+div.niceline {
+    height: 51px;
+    width: 5px;
+    background-color: #FF5A49;
+    float: left;
+    margin-top: 35px;
+    margin-right: 7px;
+}
+
+div.back_to_top {
+    position: fixed;
+    bottom: 170px;
+    right: 20px;
+}
+
+/*CONTACT PAGE*/
+
+#contact div:first-of-type {
+    display: none;
+}
+
+#contact div:last-of-type {
+    text-align: center;
+    width: 100%;
+}
+
+#contact div p {
+    text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+
+    #contact {
+        margin: 0 auto;
+        margin-top: 30px;
+        border-radius: 10px;
+        min-height: 200px;
+        max-height: 400px;
+        overflow: hidden;
+        width: 90%;
+    }
+
+    #contact div p {
+        text-align: left;
+    }
+
+    #contact div p:first-of-type {
+        margin-top: 0;
+    }
+
+    #contact div:first-of-type {
+        display: block;
+        float: left;
+        background-image: url("Douris_Man_with_wax_tablet.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        border-radius: 25px;
+        overflow: hidden;
+        width: 40%;
+        max-width: 300px;
+        height: 309px;
+    }
+
+    #contact div:last-of-type {
+        display: inline-block;
+        width: 55%;
+        padding: 15px 0 25px 5%;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    #contact div:first-of-type {
+        height: 290px;
+    }
+}
+
+/*TRAVEL & ACCOMMODATION PAGE*/
+
+.locationDetails {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.locationDetails p, .locationDetails h3 {
+    text-align: left;
+}
+
+.locationDetails h3 {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.locationDetails p {
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.map_pin {
+    height: 2.5em;
+    margin: 0.3em 0.5em 0.2em 1em;
+    display: inline;
+    float: left;
+    clear: left;
+}
+
+#map {
+    margin-top: 15px;
+    height: 300px;
+    width: 100%;
+}
+
+h4.transport {
+    margin-top: 20px;
+}
+
+h4.transport + p {
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 700px) {
+    #map {
+        height: 400px;
+        width: 50%;
+        display: inline-block;
+        float: left;
+        margin-top: 45px;
+        margin-left: 5%;
+    }
+    
+    .locationDetails {
+        display: inline-block;
+        width: 100%;
+        max-width: 290px;
+        margin: 35px 0 0 10px;
+    }
+    
+    #travel_article {
+        clear: both;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+    #travelPage {
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    #map {
+        height: 350px;
+    }
+    
+    .locationDetails {
+        max-width: 390px;
+    }
+    
+}
+
+@media screen and (min-width: 1500px) {
+    
+    #map {
+        margin-left: 20%;
+        width: 50%;
+    }
+}

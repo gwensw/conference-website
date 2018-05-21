@@ -1,0 +1,165 @@
+<head>
+    <title>Numbers and Numeracy Conference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+    <!---STYLE--->
+    <link rel="stylesheet" type="text/css" href="conference.css">
+    <!---FORM STYLE--->
+    <link rel="stylesheet" type="text/css" href="forms.css">
+    
+    <!---GOOGLE ANALYTICS--->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-77201845-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <!---JAVASCRIPT: toggles visibility--->
+    <script type="text/javascript">
+        function toggle_visibility(id, sid) {
+            var e = document.getElementById(id);
+            var s = document.getElementById(sid);
+            if(e.style.display == 'block') {
+                e.style.display = 'none';
+                s.innerHTML = ">";
+            }
+            else {
+                e.style.display = 'block';
+                s.innerHTML = "v";
+            }
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="navbox" onclick="toggle_visibility('navigation',null)">
+            <div class="navboxLine"></div>
+            <div class="navboxLine" id="navboxShortLine"></div>
+            <div class="navboxLine" id="navboxLastLine"></div>
+        </div>
+        
+        <nav id="navigation">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="register.html"><li id="activePage">Registration</li></a>
+                <a href="programme.html"><li>Programme</li></a>
+                <a href="abstracts.html"><li>Abstracts</li></a>
+                <a href="travel.html"><li>Travel & Accommodation</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+
+        <header class="secondaryPageHeader">
+            <h1>Registration</h1>
+        </header>
+
+
+        <section>
+            <article>
+
+                <p><span class="bold">Registration is now closed.</span></p>
+                <p>The conference is free to attend. Lunch will be provided free of charge on both days - please indicate your interest below to give us an idea of numbers.</p>
+                <p>The conference dinner will take place on Friday evening at 20:00 at the <a href="http://porto-pino.nl/" alt="Porto Pino restaurant website">Porto Pino</a> restaurant. Tickets for the dinner will be on sale during the conference at a cost of &euro;35 per person.</p>
+                
+                <!----
+                
+                <div id="mc_embed_signup">
+                    <form action="http://academia.us12.list-manage.com/subscribe/post" method="POST">
+                        <input type="hidden" name="u" value="e097b9a58d08bc7947c840d33">
+                        <input type="hidden" name="id" value="e3f378b240">
+                    
+                    <div id="mc_embed_signup_scroll">
+
+                        <div class="indicates-required"><span class="asterisk">*</span> indicates required information</div>
+
+                        <div class="mc-field-group text">
+                            <label for="MERGE0"><span class="asterisk">*</span> Email Address</label>
+                            <input type="email" value="" name="MERGE0" class="required email" id="MERGE0" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Email');">
+                        </div>
+
+                        <div class="mc-field-group text">
+                            <label for="MERGE2">Title </label>
+                            <input type="text" value="" name="MERGE2" class="" id="MERGE2" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Title');">
+                        </div>
+
+                        <div class="mc-field-group text">
+                            <label for="MERGE1"><span class="asterisk">*</span> Full Name (as it will appear on your name badge)</label>
+                            <input type="text" value="" name="MERGE1" class="required" id="MERGE1"  onclick="ga('send', 'event', 'Forms', 'select field', 'Form Name');">
+                        </div>
+
+                        <div class="mc-field-group text">
+                            <label for="MERGE3">Institution</label>
+                            <input type="text" value="" name="MERGE3" class="" id="MERGE3" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Institution');">
+                        </div>
+
+                        <div class="mc-field-group input-group">
+                            <span class="asterisk">*</span> <strong>Days Attending</strong>
+                            <ul>
+                                <li><input type="radio" value="Friday 2nd September" name="MERGE4" id="MERGE4-0" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Attending Friday');"><label for="MERGE4-0">Friday 2nd September</label></li>
+                                <li><input type="radio" value="Saturday 3rd September" name="MERGE4" id="MERGE4-1" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Attending Saturday');"><label for="MERGE4-1">Saturday 3rd September</label></li>
+                                <li><input type="radio" value="Both days" name="MERGE4" id="MERGE4-2" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Attending Both');"><label for="MERGE4-2">Both days</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="mc-field-group input-group">
+                            <span class="asterisk">*</span> <strong>Would you like the free lunch?</strong>
+                            <ul>
+                                <li><input type="radio" value="Yes, both days" name="MERGE5" id="MERGE5-0" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Lunch Both');"><label for="MERGE5-0">Yes, both days</label></li>
+                            <li><input type="radio" value="Yes, Friday only" name="MERGE5" id="MERGE5-1" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Lunch Friday');"><label for="MERGE5-1">Yes, Friday only</label></li>
+                            <li><input type="radio" value="Yes, Saturday only" name="MERGE5" id="MERGE5-2" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Lunch Saturday');"><label for="MERGE5-2">Yes, Saturday only</label></li>
+                            <li><input type="radio" value="No" name="MMERGE5" id="MERGE5-3"><label for="MERGE5-3" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Lunch None');">No</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="mc-field-group input-group">
+                            <span class="asterisk">*</span> <strong>Are you planning to attend the conference dinner on Friday?</strong>
+                            <ul>
+                                <li><input type="radio" value="Yes" name="MERGE6" id="MERGE6-0" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Dinner Yes');"><label for="MERGE6-0">Yes</label></li>
+                                <li><input type="radio" value="Maybe" name="MERGE6" id="MERGE6-1" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Dinner Maybe');"><label for="MERGE6-1">Maybe</label></li>
+                                <li><input type="radio" value="No" name="MERGE6" id="MERGE6-2" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Dinner No');"><label for="MERGE6-2">No</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="mc-field-group text">
+                            <label for="MERGE7">Dietary Requirements</label>
+                            <input type="text" value="" name="MERGE7" class="" id="MERGE7" onclick="ga('send', 'event', 'Forms', 'select field', 'Form Dietary');">
+                        </div>
+
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>
+
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_e097b9a58d08bc7947c840d33_e3f378b240" tabindex="-1" value="">
+                        </div>
+
+                        <div class="clear"><input type="submit" value="Register" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="ga('send', 'event', 'Buttons', 'click', 'Register Submit Button');"></div>
+                    </div>
+                    
+                    </form>
+                </div>
+                
+                --->
+                
+            </article>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>Conference organised by <a href="http://leidenuniv.academia.edu/TAvanBerkel" alt="Tazuko van Berkel's Academic.edu profile">Tazuko van Berkel</a> (Leiden) and <a href="http://cambridge.academia.edu/RobSing" alt="Robert Sing's Academia.edu profile">Robert Sing</a> (Cambridge).</p>
+        <p>Website by <a href="https://www.linkedin.com/in/gwen-sims-williams-55b97769" alt="LinkedIn">Gwen Sims-Williams</a>.</p>
+        <p>Photos: Athenian tribute list by <a href="https://commons.wikimedia.org/wiki/File%3AEPMA-IGI(3)273-280-Tribute_list_2-2.JPG" title="Wikimedia Commons">Marsyas</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" title="Creative Commons">CC BY-SA 3.0</a>.<br>
+        Douris vase painting by <a href="https://commons.wikimedia.org/wiki/File:Douris_Man_with_wax_tablet.jpg" title="Wikimedia Commons">Pottery Fan</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" title="Creative Commons">CC BY-SA 3.0</a>.</p>
+    </footer>
+        
+</body>

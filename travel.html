@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+    <title>Numbers and Numeracy Conference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Cinzel+Decorative:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+    <!---STYLE--->
+    <link rel="stylesheet" type="text/css" href="conference.css">
+    
+    <!---GOOGLE ANALYTICS--->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-77201845-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <!---JAVASCRIPT: toggles visibility of articles--->
+    <script type="text/javascript">
+        function toggle_visibility(id, sid) {
+            var e = document.getElementById(id);
+            var s = document.getElementById(sid);
+            if(e.style.display == 'block') {
+                e.style.display = 'none';
+                s.innerHTML = ">";
+            }
+            else {
+                e.style.display = 'block';
+                s.innerHTML = "v";
+            }
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="navbox" onclick="toggle_visibility('navigation',null)">
+            <div class="navboxLine"></div>
+            <div class="navboxLine" id="navboxShortLine"></div>
+            <div class="navboxLine" id="navboxLastLine"></div>
+        </div>
+        
+        <nav id="navigation">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="register.html"><li>Registration</li></a>
+                <a href="programme.html"><li>Programme</li></a>
+                <a href="abstracts.html"><li>Abstracts</li></a>
+                <a href="travel.html"><li id="activePage">Travel & Accommodation</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+
+        <header class="secondaryPageHeader">
+            <h1>Travel & Accommodation</h1>
+        </header>
+
+
+        <section>
+            
+            <div id="travelPage">
+                    <article class="locationDetails">
+                        <h3>Venues</h3>
+                        <img class="map_pin" src="http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|FF5A49|000">
+                        <p><span class="bold">Friday 3rd:</span> <a href="https://www.universiteitleiden.nl/en/locations/gravensteen-building" alt="Gravensteen Building profile on the Leiden University site">Gravensteen Building</a>, Pieterskerkhof 6, 2311 SR Leiden</p>
+                        <img class="map_pin" src="http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=B|EBD4B3|000">
+                        <p><span class="bold">Saturday 4th:</span> <a href="https://www.universiteitleiden.nl/en/locations/lipsius-building" alt="Lipsius Building profile on the Leiden University site">Lipsius Building</a>, Cleveringaplaats 1, 2311 BD Leiden</p>
+                        <h3>Conference Hotels</h3>
+                        <img class="map_pin" src="http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=C|F9FFF3|000">
+                        <p><a href="http://www.dedoelen.com/homepage/" alt="Hotel de Doelen website">Hotel de Doelen</a>, Rapenburg 2, 2311 EV Leiden</p>
+                        <img class="map_pin" src="http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=D|302724|F9FFF3">
+                        <p><a href="http://www.nieuwminerva.nl/en/" alt="Hotel Nieuw Minerva website">City Hotel Nieuw Minerva</a>, Boommarkt 23, 2311 EA Leiden</p>
+                    </article>
+                    <div id="map"></div>
+                    <script>
+                        var map;
+                        function initMap() {
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                center: {lat: 52.161912, lng: 4.488152},
+                                zoom: 14
+                            });
+                            
+                            var markerA = new google.maps.Marker({
+                                map: map,
+                                position: {lat: 52.157884, lng: 4.487042},
+                                title: 'Gravensteen Building, Pieterskerkhof 6, 2311 SR Leiden',
+                                draggable: false,
+                                icon: new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|FF5A49|000")
+                            });
+
+                            var markerB = new google.maps.Marker({
+                                map: map,
+                                position: {lat: 52.157785, lng: 4.482934},
+                                title: 'Lipsius Building, Cleveringaplaats 1, 2311 BD Leiden',
+                                draggable: false,
+                                icon: new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=B|EBD4B3|000")
+                            });
+
+                            var markerC = new google.maps.Marker({
+                                map: map,
+                                position: {lat: 52.159987, lng: 4.485202},
+                                title: 'Hotel de Doelen, Rapenburg 2, 2311 EV Leiden',
+                                draggable: false,
+                                icon: new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=C|F9FFF3|000")
+                            });
+
+                            var markerD = new google.maps.Marker({
+                                map: map,
+                                position: {lat: 52.160096, lng: 4.488505},
+                                title: 'City Hotel Nieuw Minerva, Boommarkt 23, 2311 EA Leiden',
+                                draggable: false,
+                                icon: new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=D|302724|F9FFF3")
+                            });
+                        }   
+                    </script>
+                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5T8b1SfzhtmfVO_iff6xt1b-5GR8ZHQM&callback=initMap"></script>
+            
+            </div>    
+            
+            
+            <article id="travel_article">
+                <button class="open" onclick="toggle_visibility('travelToLeiden', 'travelArrow');" alt="click to toggle open/close">
+                    <h3>Travel to Leiden</h3>
+                    <div class="expandArrow" id="travelArrow">></div>
+                </button>
+                <hr>
+                <div id="travelToLeiden" style="display: none">
+                    <p>Leiden Central Station (<span class="italic">Leiden Centraal</span>) is easily accessible by train from Amsterdam, Rotterdam and Den Haag, with connections to all major European cities. The train station is within a 15 minute walk of all the conference venues and hotels.</p>
+                    <p>The closest airport is Schiphol International in Amsterdam. From Schiphol, you have following options:</p>
+                    <h4 class="transport">Train</h4>
+                        <p>Trains run regularly from Schiphol Airport Train Station (directly under the airport) to Leiden Central Station. The journey takes around 20 minutes and costs around 6 euros.</p>
+                        <p>NS (Dutch Railways) tickets can be purchased from the yellow ticket machines located near the platforms at Schiphol Plaza. Tickets can also be purchased from the ticket and service desks close to the red and white-checked cube at Schiphol Plaza. <a href="http://www.ns.nl/en" alt="Dutch rail website">To book in advance, visit the NS website</a>.</p>
+                    <h4 class="transport">Bus</h4>
+                        <p>Bus 365 to Leiden Central Station arrives and departs Schiphol Plaza directly in front of the airport's Arrival and Departure Halls. The journey takes 50 minutes to 1 hour 15 minutes, and costs 5-7 euros.</p>
+                     <h4 class="transport">Taxi</h4>
+                        <p>A taxi from Schiphol International Airport to Leiden will cost 70-80 euros with a journey time of around 20 minutes.</p>
+                </div>
+                
+                <button class="open" onclick="toggle_visibility('conferenceHotel', 'hotelArrow');" alt="click to toggle open/close">
+                    <h3>Conference Hotel</h3>
+                    <div class="expandArrow" id="hotelArrow">></div>
+                </button>
+                <hr>
+                <div id="conferenceHotel" style="display: none">
+                    <p>We recommend the <a href="http://www.nieuwminerva.nl/en/" alt="Hotel Nieuw Minerva website">City Hotel Nieuw Minerva</a> or the <a href="http://www.dedoelen.com/homepage/" alt="Hotel de Doelen website">Hotel de Doelen</a>. Both are situated in the centre of the old town, within ten minutes' walk of both conference venues, and 15 minutes' walk or six minutes by car from the central train station.</p> 
+                </div>
+                
+                <button class="open" onclick="toggle_visibility('gettingAround', 'aroundArrow');" alt="click to toggle open/close">
+                    <h3>Getting Around Leiden</h3>
+                    <div class="expandArrow" id="aroundArrow">></div>
+                </button>
+                <hr>
+                <div id="gettingAround" style="display: none">
+                    <p>Details to follow.</p> 
+                </div>
+                
+            </article>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>Conference organised by <a href="http://leidenuniv.academia.edu/TAvanBerkel" alt="Tazuko van Berkel's Academic.edu profile">Tazuko van Berkel</a> (Leiden) and <a href="http://cambridge.academia.edu/RobSing" alt="Robert Sing's Academia.edu profile">Robert Sing</a> (Cambridge).</p>
+        <p>Website by <a href="https://www.linkedin.com/in/gwen-sims-williams-55b97769" alt="LinkedIn">Gwen Sims-Williams</a>.</p>
+        <p>Photos: Athenian tribute list by <a href="https://commons.wikimedia.org/wiki/File%3AEPMA-IGI(3)273-280-Tribute_list_2-2.JPG" title="Wikimedia Commons">Marsyas</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" title="Creative Commons">CC BY-SA 3.0</a>.<br>
+        Douris vase painting by <a href="https://commons.wikimedia.org/wiki/File:Douris_Man_with_wax_tablet.jpg" title="Wikimedia Commons">Pottery Fan</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" title="Creative Commons">CC BY-SA 3.0</a>.</p>
+    </footer>
+        
+</body>
+</html>
